@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <template id="ujSorTemp">
+      <tr>
+        <td class="id"></td>
+        <td class="email">email</td>
+        <td class="age">age</td>
+        <td class="profile">
+          <img src="" class="img-fluid">
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger" id="torles">Törlés</button>
+        </td>
+      </tr>
+    </template>
+
+    <main class="container">
+      <div class="container">
+        <form id="hozzaad">
+          <label class="form-label">Új felhasználó:</label>
+          <div class="mb-3">
+            <input class="form-control" id="email" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="number" class="form-control" id="kor" placeholder="Kor">
+          </div>
+          <button type="submit" class="btn btn-success">Hozzáadás</button>
+          <label class="form-label text-danger" id="hozzaadJelento"></label>
+        </form>
+      </div>
+  
+      <div class="container">
+        <form id="modosit">
+          <label class="form-label">Felhasználó adatainak módosítása:</label>
+          <div class="mb-3">
+            <input type="number" class="form-control" id="userID" placeholder="ID">
+          </div>
+          <div class="mb-3">
+            <input class="form-control" id="emailM" placeholder="Email">
+          </div>
+          <div class="mb-3">
+            <input type="number" class="form-control" id="korM" placeholder="Kor">
+          </div>
+          <button type="submit" class="btn btn-primary">Módosítás</button>
+          <label class="form-label text-danger" id="modositJelento"></label>
+        </form>
+      </div>
+
+      <div class="table-responsive">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>EMAIL</th>
+              <th>KOR</th>
+              <th>PROFILKÉP</th>
+              <th>MŰVELETEK</th>
+            </tr>
+          </thead>
+          <tbody id="tabla"></tbody>
+        </table>
+      </div>
+    </main>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
